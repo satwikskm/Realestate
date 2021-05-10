@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(s(=r5+#h$+uk6y1av&35pmuqr!va=%pcytza^sw))!77f-khr'
+#SECRET_KEY = '(s(=r5+#h$+uk6y1av&35pmuqr!va=%pcytza^sw))!77f-khr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
+    'contacts.apps.ContactsConfig',
     'accounts.apps.AccountsConfig',
     'listings.apps.ListingsConfig',
     'realtors.apps.RealtorsConfig',
@@ -143,3 +144,11 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger',
     
 }
+
+#  Email config
+
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=''
+EMAIL_HOST_USER=''
+EMAIL_HOST_PASSWORD=''
+EMAIL_USE_TLS=True
